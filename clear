@@ -1,0 +1,35 @@
+[1mdiff --git a/operations.html b/operations.html[m
+[1mindex ee28d01..5dd7169 100644[m
+[1m--- a/operations.html[m
+[1m+++ b/operations.html[m
+[36m@@ -7,12 +7,18 @@[m
+      sumar: function sumarNumeros(n1, n2) {[m
+      return (parseInt(n1) + parseInt(n2)); [m
+      },[m
+[31m-     restar: function restarNumeros(n1, n2) { return (parseInt(n1) - parseInt(n2));[m
+[32m+[m[32m     restar: function restarNumeros(n1, n2) {[m[41m [m
+[32m+[m[32m     return (parseInt(n1) - parseInt(n2));[m
+      }[m
+[32m+[m[32m     multiplicar: function multiplicarNumeros(n1, n2) {[m
+[32m+[m[32m            return (parseInt(n1) * parseInt(n2));[m
+[32m+[m[32m        },[m
+      };[m
+      var num1 = document.getElementById("num1").value;[m
+      var num2 = document.getElementById("num2").value;[m
+[32m+[m[41m     [m
+      //Comprobamos si se ha introducido números en las cajas [m
+[32m+[m[41m     [m
+      if (isNaN(parseFloat(document.getElementById('num1').value))) {[m
+      alert("Indique un número en 'numero1'");[m
+      document.getElementById("num1").innerText = "0";[m
+[36m@@ -34,6 +40,10 @@[m
+      var resultado = ops.restar(num1, num2);[m
+      alert (resultado);[m
+      break;[m
+[32m+[m[32m      case 'multiplicar':[m
+[32m+[m[32m                var resultado = ops.multiplicar(num1, num2);[m
+[32m+[m[32m                alert(resultado);[m
+[32m+[m[32m                break;[m
+      }[m
+      }[m
+      }[m
